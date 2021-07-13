@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="WebRTC code samples">
+    <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, maximum-scale=1">
+
+    <link rel="stylesheet" href="css/main.css"/>
+</head>
+
+<body>
+
+<div id="container">
+    <h1>[streamd demo]</h1>
+
+    <div>
+        <h2>Host</h2>
+        <video id="hostVideo" playsinline autoplay></video>
+        <div>
+            <button id="startButton">Start host stream</button>
+            <button id="callButton">Call viewers</button>
+            <button id="hangupButton">Hang up to viewers</button>
+        </div>
+    </div>
+    <div>
+        <h2>Viewer1</h2>
+        <video id="viewerVideo1" playsinline autoplay></video>
+    </div>
+    <div>
+        <h2>Viewer2</h2>
+        <video id="viewerVideo2" playsinline autoplay></video>
+    </div>
+</div>
+
+<script src="js/main.js" async></script>
+
+</body>
+</html>
