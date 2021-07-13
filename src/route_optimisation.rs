@@ -20,13 +20,12 @@ impl User {
 #[derive(Clone, Copy, Debug)]
 pub struct Connection {
     pub sharer_id: usize,
-    pub reciever_id: usize,
-    leftover_bandwith: f64
+    pub reciever_id: usize
 }
 
 impl Connection {
     pub fn from_users(sharer: User, users: &mut Vec<User>) -> Vec<Connection> {
-        users.sort_by(|user_one, user_two| (-1. * user_one.bottleneck_speed).partial_cmp(&user_two.bottleneck_speed).unwrap());
+        users.sort_by(|user_one, user_two| user_one.bottleneck_speed.partial_cmp(&user_two.bottleneck_speed).unwrap());
 
         let (mut queue, mut users, mut connections) = (Vec::new(), users, Vec::new());
         queue.push(sharer);
@@ -41,11 +40,13 @@ impl Connection {
 
     pub fn maximise_connections(queue: &mut Vec<User>, recievers: &mut Vec<User>, connections: &mut Vec<Self>) {
         let sharer = queue.remove(0);
-        let mut reciever;
         let mut net_bandwith = 0.;
 
-        while net_bandwith <= sharer.bottleneck_speed {
-            reciever = recievers.remove(0);
+        while let Some(reciever) = recievers.pop() {
+            if net_bandwith > sharer.bottleneck_speed {
+                continue
+            }
+
             queue.push(reciever);
 
             net_bandwith += reciever.bottleneck_speed;
@@ -53,7 +54,6 @@ impl Connection {
                 Connection {
                     sharer_id: sharer.id,
                     reciever_id: reciever.id,
-                    leftover_bandwith: sharer.bottleneck_speed - net_bandwith
                 }
             );
         }
