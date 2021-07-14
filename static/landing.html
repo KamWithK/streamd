@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Streamd</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+</head>
+
+<script src="landing.js"></script>
+
+<!-- Information Section -->
+<section class="section" style="padding-top: 20px; height: 77vh;">
+    <div class="container">
+        <!-- Logo and About -->
+        <div class="columns">
+            <div class="column is-flex" style="align-items: center;">
+                <img src="assets/streamdlogo.png" alt="site logo" style="max-height: 100px; padding-right: 15px;">
+                <h1 class="logo-name">stream<span style = "color:#5CA7FF">d</span></h1>
+            </div>
+            <div class="column is-flex" style="align-items: center; justify-content: flex-end;">
+                <a class="about" onclick="aboutClick()">about</a>
+            </div>
+        </div>
+        <!-- Slogan -->
+        <div class="columns" style="padding-top: 30px;">
+            <div class="column is-flex" style="align-items: center;">
+                <h1 class = "slogan">LATENCY<br>FREE<br>STREAMING</h1>
+            </div>
+            <div class="column is-flex" style="align-items: center; justify-content: flex-end;">
+            </div>
+        </div>
+        <!-- Description -->
+        <div class="columns" style="padding-top: 5px; padding-right: 50px;">
+            <div class="column is-flex" style="align-items: center;">
+                <p class="description has-text-justified">
+                    stream<span style = "color:#5CA7FF">d</span> is a fast and easy website to stream your favorite games and presentations to your friends, colleagues and family.
+                    <br><br><b><em>Efficient, Distributed, No Login!</em></b>
+                </p>
+            </div>
+            <div class="column is-flex" style="align-items: center; justify-content: flex-end;">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Join and Host Button Section -->
+<section class="section" style = "background-color: #f5f5f5; height: 23vh;">
+    <div class="container">
+        <!-- Join and Host Button -->
+        <div class="columns">
+            <div class="column is-flex" style="align-items: center; justify-content: flex-end; padding-right: 50px;">
+                <button class="join">join</button>
+            </div>
+            <div class="column is-flex" style="align-items: center; padding-left: 50px;">
+                <button class="host">host</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title">Modal title</p>
+        <button class="delete" aria-label="close"></button>
+      </header>
+      <section class="modal-card-body">
+        <!-- Content ... -->
+      </section>
+      <footer class="modal-card-foot">
+        <button class="button is-success">Save changes</button>
+        <button class="button">Cancel</button>
+      </footer>
+    </div>
+</div>
+
+<style>
+    /* Hide Scroll */
+    html {
+        overflow-y: hidden;  
+    }
+    body::-webkit-scrollbar {
+        display: none; /* for Chrome, Safari, and Opera */
+    }
+
+    .logo-name {
+        font-size: 60px;
+        color: rgba(0, 0, 0, 0.8);
+        letter-spacing: 2px;
+
+    }
+    .about {
+        font-size: 25px;
+        color: #5CA7FF;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    .join{
+        background: #5CA7FF;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+        border-radius: 30px;
+        width: 216px;
+        height: 103px;
+        border: none;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 46px;
+        color: white;
+        padding-bottom: 10px;
+    }
+    .host{
+        background: #FFFFFF;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+        border-radius: 20px;
+        width: 216px;
+        height: 103px;
+        border: none;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 46px;
+        color: #5CA7FF;
+        padding-bottom: 10px;
+    }
+    .slogan{
+        font-size: 60px;
+        letter-spacing: 3px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: #7A7A7A;
+    }
+    .description{
+        font-size: 27px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: black;
+    }
+</style>
+
+</html>
