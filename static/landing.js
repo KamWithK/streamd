@@ -1,6 +1,25 @@
 
-function aboutClick(){
+function aboutClick() {
     window.location.replace("http://127.0.0.1:5500/static/streaming.html");
+}
+
+// Returns 6 digit code entered by the user
+function acceptClick() {
+    var code = "";
+
+    var keys = [
+        "firstNo",
+        "secondNo",
+        "thirdNo",
+        "fourthNo",
+        "fifthNo",
+        "sixthNo"
+    ];
+
+    for (const key of keys){
+        code += document.getElementById(key).value;
+    }
+    return parseInt(code);
 }
 
 window.onload = function () {
