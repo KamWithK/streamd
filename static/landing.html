@@ -53,10 +53,10 @@
         <!-- Join and Host Button -->
         <div class="columns">
             <div class="column is-flex" style="align-items: center; justify-content: flex-end; padding-right: 50px;">
-                <button class="join">join</button>
+                <button id="join" class="join button is-centered">join</button>
             </div>
             <div class="column is-flex" style="align-items: center; padding-left: 50px;">
-                <button class="host">host</button>
+                <button id="host" class="host button">host</button>
             </div>
         </div>
     </div>
@@ -65,21 +65,63 @@
 <div class="modal">
     <div class="modal-background"></div>
     <div class="modal-card">
-      <header class="modal-card-head">
-        <p class="modal-card-title">Modal title</p>
-        <button class="delete" aria-label="close"></button>
-      </header>
-      <section class="modal-card-body">
-        <!-- Content ... -->
+
+      <section class="code modal-card-body">
+        <div class="columns">
+            <div class="column is-flex" style="justify-content: center; padding: 3px;">
+                <h1 class="is-size-2" style="color: #7A7A7A;">JOIN STREAM</h1>
+            </div>
+        </div>
+        <div class="columns">
+            <div class="column is-flex" style="justify-content: center; padding: 3px;">
+                <h1 class="is-size-5 has-text-centered" stlye="color:#000000">To join a stream, please enter the 6 digit code provided by your host</h1>
+            </div>
+        </div>
+        <div class="columns is-gapless">
+            <div class="column is-flex" style="justify-content: center;">
+                <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');" />
+            </div>
+            <div class="column is-flex" style="justify-content: center;">
+                <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');" />
+            </div>
+            <div class="column is-flex" style="justify-content: center;">
+                <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');" />
+            </div>
+            <div class="column is-flex" style="justify-content: center;">
+                <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');" />
+            </div>
+            <div class="column is-flex" style="justify-content: center;">
+                <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');" />
+            </div>
+            <div class="column is-flex" style="justify-content: center;">
+                <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');" />
+            </div>
+        </div>
+        <div class="columns">
+            <div class="column is-flex" style="justify-content: center; padding: 10px;">
+                <button class="accept button">join</button>
+            </div>
+        </div>
       </section>
-      <footer class="modal-card-foot">
-        <button class="button is-success">Save changes</button>
-        <button class="button">Cancel</button>
-      </footer>
     </div>
 </div>
 
 <style>
+    input{
+        max-width: 50px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 45px;
+        color: #000000;
+        text-align: center;
+        border: none;
+        outline: none;
+        background-color: #BDBDBD;
+        
+    }
+    .code{
+        border-radius: 30px;
+        background-color: #F5F5F5;
+    }
     /* Hide Scroll */
     html {
         overflow-y: hidden;  
@@ -99,6 +141,18 @@
         color: #5CA7FF;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
     }
+    .accept{
+        background: #5CA7FF;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+        border-radius: 20px;
+        width: 100px;
+        height: 50px;
+        border: none;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 25px;
+        color: white;
+        padding-bottom: 12px;
+    }
     .join{
         background: #5CA7FF;
         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
@@ -109,7 +163,7 @@
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         font-size: 46px;
         color: white;
-        padding-bottom: 10px;
+        padding-bottom: 20px;
     }
     .host{
         background: #FFFFFF;
@@ -121,7 +175,7 @@
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         font-size: 46px;
         color: #5CA7FF;
-        padding-bottom: 10px;
+        padding-bottom: 20px;
     }
     .slogan{
         font-size: 60px;
