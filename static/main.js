@@ -1,12 +1,9 @@
 'use strict';
 
 const startButton = document.getElementById('startButton');
-const callButton = document.getElementById('callButton');
 const hangupButton = document.getElementById('hangupButton');
-callButton.disabled = true;
 hangupButton.disabled = true;
 startButton.onclick = start;
-callButton.onclick = call;
 hangupButton.onclick = hangup;
 
 const hostVideo = document.querySelector('video#hostVideo');
@@ -26,7 +23,8 @@ function gotStream(stream) {
     console.log('Received local stream');
     hostVideo.srcObject = stream;
     window.localStream = stream;
-    callButton.disabled = false;
+
+    call();
 }
 
 function start() {
@@ -41,7 +39,6 @@ function start() {
 }
 
 async function call() {
-    callButton.disabled = true;
     hangupButton.disabled = false;
     console.log('Starting calls');
     const audioTracks = window.localStream.getAudioTracks();
@@ -125,7 +122,6 @@ function hangup() {
     pc1Local = pc1Remote = null;
     pc2Local = pc2Remote = null;
     hangupButton.disabled = true;
-    callButton.disabled = false;
 }
 
 function gotRemoteStream1(e) {
