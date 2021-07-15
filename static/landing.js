@@ -22,6 +22,10 @@ function acceptClick() {
     return parseInt(code);
 }
 
+function logoClick(){
+    window.location.replace("index.html");
+}
+
 window.onload = function codeModal() {
     const aboutBtn = document.querySelector('#about');
     const aboutModal = document.querySelector('#aboutModal');

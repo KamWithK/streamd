@@ -167,3 +167,7 @@ function onAddIceCandidateSuccess() {
 function onAddIceCandidateError(error) {
     console.log(`Failed to add ICE candidate: ${error.toString()}`);
 }
+
+function logoClick(){
+    window.location.replace("index.html");
+}
