@@ -3,6 +3,10 @@ function aboutClick() {
     window.location.replace("http://127.0.0.1:5500/static/streaming.html");
 }
 
+function hostClick() {
+    window.location.replace("http://127.0.0.1:5500/static/streaming.html");
+}
+
 // Returns 6 digit code entered by the user
 function acceptClick() {
     var code = "";

@@ -10,9 +10,10 @@
 </head>
 
 <script src="streaming.js"></script>
+<script src="main.js" async></script>
 
 <!-- Streaming Section -->
-<section class="section" style="padding-top: 20px; height: 82vh;">
+<section class="section" style="padding-top: 20px; height: 92.5vh;">
     <div class="container">
         <!-- Logo and About -->
         <div class="columns">
@@ -26,28 +27,66 @@
         </div>
         <!-- Streaming Box -->
         <div class="box">
-            <video width="1920" height="570" controls>
-                <source src="movie.mp4" type="video/mp4">
-                <source src="movie.ogg" type="video/ogg">
+            <video id="hostVideo" width="100%" height="100%" playsinline autoplay>
+                <!-- <source src="movie.mp4" type="video/mp4">
+                <source src="movie.ogg" type="video/ogg"> -->
               Your browser does not support the video tag.
-              </video>
+            </video>
         </div>
     </div>
 </section>
 
-<!-- Close Button Section -->
-<section class="section" style="height: 18vh; background-color: #f5f5f5;">
+<section class="section" style="height: 7.5vh;">
     <div class="container">
-        <!-- Close Button -->
-        <div class="columns">
-            <div class="column is-flex" style="align-items: center; justify-content: center; padding-top: 27px;">
-                <button class="close button">close</button>
-            </div>
-        </div>
+        <button class="startButton button" id="startButton">setup</button>
+        <button class="callButton button" id="callButton">start call</button>
+        <button class="hangupButton button" id="hangupButton">end call</button>
     </div>
 </section>
+
+
 
 <style>
+    .startButton{
+        background: #5CA7FF;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+        border-radius: 15px;
+        width: 115px;
+        height: 40px;
+        border: none;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 20px;
+        color: white;
+        padding-bottom: 7px;
+    }
+
+    .callButton{
+        background: #5CA7FF;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+        border-radius: 15px;
+        width: 115px;
+        height: 40px;
+        border: none;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 20px;
+        color: white;
+        padding-bottom: 7px;
+    }
+
+    .hangupButton{
+        background: #5CA7FF;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+        border-radius: 15px;
+        width: 115px;
+        height: 40px;
+        border: none;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 20px;
+        color: white;
+        padding-bottom: 7px;
+    }
+
+
     /* Hide Scroll */
     html{
         overflow-y: hidden;  
@@ -70,22 +109,10 @@
         font-family: Verdana, Geneva, Tahoma, sans-serif;
     }
     .box{
-        height: 610px;
+        height: 750px;
         border-radius: 30px;
         background-color: #C4C4C4;
         box-shadow: none;
-    }
-    .close{
-        background: #FF5C97;
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-        border-radius: 30px;
-        width: 216px;
-        height: 103px;
-        border: none;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        font-size: 46px;
-        color: white;
-        padding-bottom: 20px;
     }
 </style>
 
