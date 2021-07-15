@@ -21,7 +21,7 @@
                 <h1 class="logo-name" onclick="logoClick()">stream<span style = "color:#5CA7FF">d</span></h1>
             </div>
             <div class="column is-flex" style="align-items: center; justify-content: flex-end;">
-                <a class="about" onclick="aboutClick()">about</a>
+                <a class="about" id="about">about</a>
             </div>
         </div>
         <!-- Streaming Box -->
@@ -40,9 +40,52 @@
     </div>
 </section>
 
+<!-- About Modal -->
+<div class="modal" id="aboutModal">
+    <div class="modal-background" id="aboutModalBg"></div>
+    <div class="modal-card">
+
+      <section class="code modal-card-body">
+        <div class="columns">
+            <div class="column is-flex" style="align-items: center; justify-content: center;">
+                <h1 class="modal-about">ABOUT</h1>
+                <img src="assets/streamdlogo.png" alt="site logo" style="max-height: 50px; padding-right: 10px; padding-left: 20px;">
+                <h1 class="modal-logo-name" style="padding-bottom: 10px;">stream<span style = "color:#5CA7FF">d</span></h1>
+            </div>
+        </div>
+        <div class="content">
+            <ul class="credits" style="padding-left: 10px; text-align: justify; padding-right: 30px;">
+                <li>
+                    Front end by <b>Jia Jiang</b> and <b>Lucien Rae Gentil</b> created with the help of HTML, CSS, JS, and Figma
+                </li>
+                <li>
+                    Back end by <b>Kamron Bhavnagri</b> and <b>Chris Doyle</b> created with the help of Rust and JS
+                </li>
+                <li>
+                    Content delivery by <b>Johnny Huang</b> and <b>Hai Nguyen</b> created with the help of Google Slides, Canva and iMovie
+                </li>
+            </ul>
+        </div>
+      </section>
+    </div>
+</div>
 
 
 <style>
+    .code{
+        border-radius: 30px;
+        background-color: #F5F5F5;
+    }
+    .modal-about{
+        color:#7A7A7A;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 40px;
+    }
+    .modal-logo-name{
+        font-size: 40px;
+        color: rgba(0, 0, 0, 0.8);
+        letter-spacing: 2px;
+    }
     .startButton{
         background: #5CA7FF;
         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);

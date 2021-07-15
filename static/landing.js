@@ -26,7 +26,7 @@ function logoClick(){
     window.location.replace("index.html");
 }
 
-window.onload = function codeModal() {
+window.onload = function () {
     const aboutBtn = document.querySelector('#about');
     const aboutModal = document.querySelector('#aboutModal');
     const aboutModalBg = document.querySelector('#aboutModalBg');
