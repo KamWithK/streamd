@@ -1,4 +1,4 @@
-# StreamDream
+# streamd
 streamd is a hyper-fast and efficient screen share platform using peer-to-peer distributed screen sharing to connect people together without countless logins/accounts, extensions and external software.
 
 As COVID-19 has split the physical world apart, sharing over the Internet has become a crucial element to staying connected with colleagues, family, and friends. Although screen sharing platforms have been available for public use for many years, those which are privacy-friendly and not reliant on having specific software and account creation remain unfulfilled.
