@@ -25,23 +25,31 @@
                 <a class="about" onclick="aboutClick()">about</a>
             </div>
         </div>
+        <!-- Demo Video -->
+        <div class="columns" style="float: right; padding-top: 40px;">
+            <div class="column is-flex" style="align-items: center;">
+                <div class="box">
+                    <video width="650" height="480" controls>
+                        <source src="movie.mp4" type="video/mp4">
+                        <source src="movie.ogg" type="video/ogg">
+                        Your browser does not support the video tag.
+                        </video>
+                </div>
+            </div>
+        </div>
         <!-- Slogan -->
-        <div class="columns" style="padding-top: 30px;">
+        <div class="columns" style="padding-top: 30px; max-width: 588px;">
             <div class="column is-flex" style="align-items: center;">
                 <h1 class = "slogan">LATENCY<br>FREE<br>STREAMING</h1>
             </div>
-            <div class="column is-flex" style="align-items: center; justify-content: flex-end;">
-            </div>
         </div>
         <!-- Description -->
-        <div class="columns" style="padding-top: 5px; padding-right: 50px;">
+        <div class="columns" style="padding-top: 5px; max-width: 588px;">
             <div class="column is-flex" style="align-items: center;">
                 <p class="description has-text-justified">
                     stream<span style = "color:#5CA7FF">d</span> is a fast and easy website to stream your favorite games and presentations to your friends, colleagues and family.
                     <br><br><b><em>Efficient, Distributed, No Login!</em></b>
                 </p>
-            </div>
-            <div class="column is-flex" style="align-items: center; justify-content: flex-end;">
             </div>
         </div>
     </div>
@@ -62,6 +70,7 @@
     </div>
 </section>
 
+<!-- 6 digit code Modal -->
 <div class="modal">
     <div class="modal-background"></div>
     <div class="modal-card">
@@ -106,7 +115,14 @@
     </div>
 </div>
 
+<!-- About Modal -->
+
 <style>
+    .box{
+        background-color: #C4C4C4;
+        border-radius: 30px;
+        box-shadow: none;
+    }
     input{
         max-width: 50px;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
