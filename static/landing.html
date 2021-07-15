@@ -22,7 +22,7 @@
                 <h1 class="logo-name">stream<span style = "color:#5CA7FF">d</span></h1>
             </div>
             <div class="column is-flex" style="align-items: center; justify-content: flex-end;">
-                <a class="about" onclick="aboutClick()">about</a>
+                <a class="about" id="about">about</a>
             </div>
         </div>
         <!-- Demo Video -->
@@ -71,8 +71,8 @@
 </section>
 
 <!-- 6 digit code Modal -->
-<div class="modal">
-    <div class="modal-background"></div>
+<div class="modal" id="codeModal">
+    <div class="modal-background" id="codeModalBg"></div>
     <div class="modal-card">
 
       <section class="code modal-card-body">
@@ -116,6 +116,25 @@
 </div>
 
 <!-- About Modal -->
+<div class="modal" id="aboutModal">
+    <div class="modal-background" id="aboutModalBg"></div>
+    <div class="modal-card">
+
+      <section class="code modal-card-body">
+        <div class="columns">
+            <div class="column is-flex" style="justify-content: center; padding: 3px;">
+                <h1 class="is-size-2" style="color: #7A7A7A;">JOIN STREAM</h1>
+            </div>
+        </div>
+        <div class="columns">
+            <div class="column is-flex" style="justify-content: center; padding: 3px;">
+                <h1 class="is-size-5 has-text-centered" stlye="color:#000000">To join a stream, please enter the 6 digit code provided by your host</h1>
+            </div>
+        </div>
+      </section>
+    </div>
+</div>
+
 
 <style>
     .box{

@@ -1,8 +1,4 @@
 
-function aboutClick() {
-    window.location.replace("http://127.0.0.1:5500/static/streaming.html");
-}
-
 function hostClick() {
     window.location.replace("http://127.0.0.1:5500/static/streaming.html");
 }
@@ -26,17 +22,28 @@ function acceptClick() {
     return parseInt(code);
 }
 
-window.onload = function () {
+window.onload = function codeModal() {
+    const aboutBtn = document.querySelector('#about');
+    const aboutModal = document.querySelector('#aboutModal');
+    const aboutModalBg = document.querySelector('#aboutModalBg');
     const joinBtn = document.querySelector('#join');
-    const modalBg = document.querySelector('.modal-background');
-    const modal = document.querySelector('.modal');
+    const codeModalBg = document.querySelector('#codeModalBg');
+    const codeModal = document.querySelector('#codeModal');
 
-    joinBtn.addEventListener('click', () => {
-        modal.classList.add('is-active');
+    aboutBtn.addEventListener('click', () => {
+        aboutModal.classList.add('is-active');
     })
 
-    modalBg.addEventListener('click', () => {
-        modal.classList.remove('is-active');
+    joinBtn.addEventListener('click', () => {
+        codeModal.classList.add('is-active');
+    })
+
+    aboutModalBg.addEventListener('click', () => {
+        aboutModal.classList.remove('is-active');
+    })
+
+    codeModalBg.addEventListener('click', () => {
+        codeModal.classList.remove('is-active');
     })
 };
 
