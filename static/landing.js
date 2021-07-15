@@ -1,6 +1,6 @@
 
 function hostClick() {
-    window.location.replace("http://127.0.0.1:5500/static/streaming.html");
+    window.location.replace("streaming.html");
 }
 
 // Returns 6 digit code entered by the user
